@@ -1,0 +1,9 @@
+see the developers guide for a detailed description, but to see the output
+from this program copy the log4crc file in and add this line:
+<category name="log4c.examples.helloworld" priority="debug" appender="stdout"/>
+
+注意需要将log4crc（配置文件）拷贝程序同一个路径下，并加上一句：<category name="log4c.examples.helloworld" priority="debug" appender="stdout"/>
+log4crc的文件需要正确配置了程序才能运行，此时这里的log4crc已经正确配置过了，不要改动即可正确编译和运行程序。
+编译helloworld.c的方式：gcc helloworld.c -o helloworld -L/usr/local/lib -llog4c
+
+这是一个最基本的库的调用的例子，本地是没有日志文件的，程序运行只会在终端打印:[stdout] ERROR    log4c.examples.helloworld - Hello World!
